@@ -108,7 +108,7 @@
           }
         }
       },
-      "pu t" : {
+      "put" : {
         "tags" : [ "contacts" ],
         "summary" : "Replace a contact",
         "operationId" : "replaceContact",
