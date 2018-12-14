@@ -6,7 +6,7 @@
   } ],
   "info" : {
     "description" : "This is a sample API that can be used to kickstart SAP Commerce or Microservice API develoment. More info can be found on [SAP Wiki](https://wiki.hybris.com/display/prodandtech/Hypermedia+Milestone+%233+-+Integrating+through+the+stack)",
-    "version" : "1.1.0",
+    "version" : "1.2.0",
     "title" : "Simple Contact Group API",
     "contact" : {
       "email" : "frank.grupe@sap.com"
@@ -108,7 +108,7 @@
           }
         }
       },
-      "put" : {
+      "pu t" : {
         "tags" : [ "contacts" ],
         "summary" : "Replace a contact",
         "operationId" : "replaceContact",
