@@ -26,6 +26,25 @@ paths:
         By passing in the appropriate options, you can search for
         available contacts in the system
       operationId: getContacts
+      parameters:
+      - name: page
+        in: query
+        description: page to query for
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int64
+      - name: size
+        in: query
+        description: pagesize to query for
+        required: false
+        style: form
+        explode: true
+        schema:
+          type: integer
+          format: int64
       responses:
         200:
           description: search results matching criteria
