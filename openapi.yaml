@@ -472,7 +472,10 @@ components:
               items:
                 $ref: '#/components/schemas/HyContact'
         - $ref: '#/components/schemas/HyLinks'
-        - $ref: '#/components/schemas/HyPagination'
+        - type: object
+          properties:
+            pagination:
+              $ref: '#/components/schemas/HyPagination'
     HyContact:
       allOf: 
         - type: object
@@ -489,7 +492,10 @@ components:
               items:
                 $ref: '#/components/schemas/HyGroup'
         - $ref: '#/components/schemas/HyLinks'
-        - $ref: '#/components/schemas/HyPagination'
+        - type: object
+          properties:
+            pagination:
+              $ref: '#/components/schemas/HyPagination'
     HyGroup:
       allOf: 
         - type: object
@@ -501,22 +507,19 @@ components:
     HyPagination:
       type: object
       properties:
-        pagination:
-          type: object
-          properties:
-            page: 
-              type: integer
-              example: 1
-            size:
-              type: integer
-              example: 10
-            totalcount:
-              type: integer
-              example: 14
-            links:
-              type: array
-              items:
-                $ref: '#/components/schemas/HyLink'
+        page: 
+          type: integer
+          example: 1
+        size:
+          type: integer
+          example: 10
+        totalcount:
+          type: integer
+          example: 14
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/HyLink'
     HyLinks:
       type: object
       properties:
