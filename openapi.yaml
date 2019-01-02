@@ -465,44 +465,44 @@ components:
     # custom schemas with hypermedia links
     HyContacts:
       allOf: 
+        - $ref: '#/components/schemas/HyLinks'
         - type: array
           properties:
             contacts:
               type: array
               items:
                 $ref: '#/components/schemas/HyContact'
-        - $ref: '#/components/schemas/HyLinks'
         - type: object
           properties:
             pagination:
               $ref: '#/components/schemas/HyPagination'
     HyContact:
       allOf: 
+        - $ref: '#/components/schemas/HyLinks'
         - type: object
           properties:
             contact:
               $ref: '#/components/schemas/Contact'
-        - $ref: '#/components/schemas/HyLinks'
     HyGroups:
       allOf: 
+        - $ref: '#/components/schemas/HyLinks'
         - type: array
           properties:
             groups:
               type: array
               items:
                 $ref: '#/components/schemas/HyGroup'
-        - $ref: '#/components/schemas/HyLinks'
         - type: object
           properties:
             pagination:
               $ref: '#/components/schemas/HyPagination'
     HyGroup:
       allOf: 
+        - $ref: '#/components/schemas/HyLinks'
         - type: object
           properties:
             group:
               $ref: '#/components/schemas/Group'
-        - $ref: '#/components/schemas/HyLinks'
     # generic hyperlinks definition
     HyPagination:
       type: object
